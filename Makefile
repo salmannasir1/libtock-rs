@@ -208,6 +208,18 @@ msp432:
 flash-msp432:
 	PLATFORM=msp432 cargo run $(release) --target=thumbv7em-none-eabi --example $(EXAMPLE) $(features)
 
+.PHONY: rm42l432
+rm42l432:
+	PLATFORM=rm42l432hercules cargo build $(release) --target=armv7r-none-eabihf --examples $(features)
+	
+.PHONY: flash-rm42l432
+flash-rm42l432:
+	PLATFORM=rm42l432hercules cargo run $(release) --target=armv7r-none-eabihf --example $(EXAMPLE) $(features)
+
+.PHONY: rm42l432-example
+rm42l432-example:
+	PLATFORM=rm42l432hercules cargo build $(release) --target=armv7r-none-eabihf --example $(EXAMPLE) $(features)
+
 .PHONY: clean
 clean:
 	cargo clean

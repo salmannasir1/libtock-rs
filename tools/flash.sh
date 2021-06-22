@@ -55,6 +55,11 @@ case "${PLATFORM}" in
         binary_name=rv32imc.elf
         tockload=n
         ;;
+    "rm42l432")
+        tockloader_flags=""
+        binary_name=cortex-r4.elf
+        tockload=n
+        ;;
     *)
         echo "Unknown platform \"${PLATFORM}\""
         exit 1

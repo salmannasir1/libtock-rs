@@ -5,4 +5,5 @@ channel = "nightly-2021-03-25"
 components = ["clippy", "miri", "rustfmt"]
 targets = ["thumbv7em-none-eabi",
            "riscv32imac-unknown-none-elf",
-           "riscv32imc-unknown-none-elf"]
+           "riscv32imc-unknown-none-elf",
+           "armv7r-none-eabihf"]
